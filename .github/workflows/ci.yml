@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -30,3 +30,5 @@ jobs:
       - name: Build Frontend
         run: npm run build
 
+      - name: Build Docker Image
+        run: docker build -t pitstop-pulse:latest .
