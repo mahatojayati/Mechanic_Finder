@@ -1,9 +1,6 @@
 services:
-  pitstop:
-    image: pitstop-pulse:v1
-    container_name: pitstop-pulse
+  mechanic-finder:
+    image: mechanic-finder:v1
+    container_name: mechanic-finder
     ports:
       - "3001:3001"
-    env_file:
-      - .env
-    restart: unless-stopped
